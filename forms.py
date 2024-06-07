@@ -3,9 +3,9 @@ from wtforms import StringField, IntegerField, SelectField, DateField, TimeField
 from wtforms.validators import DataRequired
 import pandas as pd
 
-train=pd.read_csv('data\Train.csv')
-val=pd.read_csv('data\Val.csv')
-X_data=pd.concat([train,val],axis=0)
+train=pd.read_csv('data/Train.csv')
+val=pd.read_csv('data/Val.csv')
+X_data=pd.concat([train,val],axis=0).drop(columns="price")
 
 class InputForm(FlaskForm):
     airline=SelectField(
