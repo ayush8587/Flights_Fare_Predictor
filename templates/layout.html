@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .loading {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2em;
+      }
+      .blurred {
+        filter: blur(5px);
+      }
+      #content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        color: black;
+      }
+      .centered-button {
+        display: flex;
+        justify-content: center;
+      }
+      .centered-button input[type="submit"] {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .centered-button input[type="submit"]:hover {
+        background-color: darkblue;
+      }
+      .div {
+        border-radius: 30px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        width: 367px;
+      }
+      .div-2 {
+        border-radius: 30px 30px 0px 0px;
+        background-color: #e7d63a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 700;
+        white-space: nowrap;
+        padding: 30px 65px;
+      }
+      .div-3 {
+        font-family: Inter, sans-serif;
+        align-self: start;
+      }
+      .img {
+        aspect-ratio: 1;
+        object-fit: auto;
+        object-position: center;
+        width: 35px;
+        fill: #000;
+        margin-top: 28px;
+      }
+      .div-4 {
+        font-family: Inter, sans-serif;
+        margin-top: 29px;
+      }
+      .div-5 {
+        align-self: center;
+        display: flex;
+        margin-top: 8px;
+        width: 100%;
+        gap: 20px;
+      }
+      .div-6 {
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: 100;
+        flex: 1;
+        padding: 0 20px;
+      }
+      .div-7 {
+        font-family: Inter, sans-serif;
+      }
+      .div-8 {
+        margin-top: 12px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-9 {
+        font-family: Inter, sans-serif;
+        margin-top: 41px;
+      }
+      .div-20 {
+        font-family: Inter, sans-serif;
+        margin-top: 41px;
+      }
+      .div-10 {
+        margin-top: 9px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-21 {
+        margin-top: 9px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-11 {
+        font-family: Inter, sans-serif;
+        margin-top: 38px;
+      }
+      .div-22 {
+        font-family: Inter, sans-serif;
+        margin-top: 38px;
+      }
+      .div-12 {
+        margin-top: 11px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-23 {
+        margin-top: 11px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-13 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .div-14 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0 2px 0 14px;
+      }
+      .div-15 {
+        font: 100 12px Inter, sans-serif;
+      }
+      .div-16 {
+        margin-top: 9px;
+        font: 400 14px Inter, sans-serif;
+      }
+      .div-17 {
+        border-color: rgba(0, 0, 0, 1);
+        border-style: dashed;
+        border-width: 1px;
+        margin-top: 28px;
+        width: 100%;
+      }
+      .div-18 {
+        align-self: center;
+        margin-top: 30px;
+        font: 400 18px Inter, sans-serif;
+      }
+      .div-19 {
+        border-radius: 0px 0px 30px 30px;
+        background-color: #d9d9d9;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 26px 60px;
+        font: 400 18px Inter, sans-serif;
+      }
+    </style>
+    <title>Flight Fare Predictor</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %} {% endif %} {% endwith %} {% block content %} {% endblock
+    content %}
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="div">
+    <div class="div-2">
+      <div class="div-3">{{ form_data['source'] }}</div>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/46c26438b0c9e121c8c4689770b957a35389fce67c81c0ab88b725493502b0df?"
+        class="img"
+      />
+      <div class="div-4">{{ form_data['destination'] }}</div>
+    </div>
+    <div class="div-5">
+      <div class="div-6">
+        <div class="div-7">Airline</div>
+        <div class="div-8">{{ form_data['airline'] }}</div>
+        <div class="div-9">Number of Stops</div>
+        <div class="div-10">{{ form_data['total_stops'] }}</div>
+        <div class="div-11">Additional Info</div>
+        <div class="div-12">{{ form_data['additional_info'] }}</div>
+      </div>
+      <div class="div-13">
+        <div class="div-14">
+          <div class="div-15">Date of Journey</div>
+          <div class="div-16">{{ form_data['date_of_journey'] }}</div>
+          <div class="div-20">Departure Time</div>
+          <div class="div-21">{{ form_data['dep_time'] }}</div>
+          <div class="div-22">Arrival Time</div>
+          <div class="div-23">{{ form_data['arrival_time'] }}</div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="div-17"></div>
+    <div class="div-18">
+      <span style="font-weight: 700">Estimated Price :</span>
+      Rs. {{ pred }}
+    </div>
+    <div class="div-19"><a href="{{ url_for('home') }}">Go back to home</a></div>
+  </div>
+<!-- <div id="content">
+    <p>{{ form_data['airline'] }}</p>
+    <p>The estimated fare is <b>Rs. {{ pred }}</b></p>
+    <a href="{{ url_for('home') }}">Go back to home</a>
+</div> -->
+{% endblock content %}
